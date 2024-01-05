@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+.lol {
+    position: absolute;
+}
+p {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+}
+.a1 {
+    animation: 1s a1 ease-out 1;
+    opacity: 0;
+}
+.a2 {
+    animation: 1s a2 ease-out 1s ;
+    opacity: 0;
+}
+.a3 {
+    animation: 1s a3 ease-out 2s ;
+    opacity: 0;
+}
+@keyframes a1 {
+    0%{
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes a2 {
+    0%{
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes a3 {
+    0%{
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.a123 {
+    opacity: 0;
+    animation: 2s a123 ease-out 3s;
+}
+@keyframes a123 {
+    0%{
+        font-size: 0px;
+    }
+    80%{
+        opacity: 1;
+        font-size: 90px;
+    }
+    100%{
+        font-size: 80px;
+    }
+}
+.o1 {
+    animation: 1.5s leftt ease-out 1 5s;
+    opacity: 0;
+}
+.o2 {
+    animation: 1.5s rightt ease-out 1 5s;
+    opacity: 0;
+}
+@keyframes leftt {
+    0%{
+        transform: translateX(-250px);
+    }
+    50%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+    }
+}
+@keyframes rightt {
+    0%{
+        transform: translateX(250px);
+    }
+    50%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+    color: rgb(251, 255, 0);
+}
+}
+.info {
+    display: block;
+    animation: 7s info ease-out 1;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+    text-decoration: none;
+    background: none;
+    transition: 0.5s;
+}
+.info:hover {
+    color: Green;
+}
+.info::after {
+    content: '';
+    display: flex;
+    height: 5px;
+    width: 100;
+    transform: rotateY(90deg);
+    background-color: white;
+    transition: 0.5s;
+}
+.info:hover:after {
+    transform: rotateY(0deg);
+    background-color: green;
+}
+@keyframes info {
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.clickme {
+    animation: 4s lmao ease-out infinite 8s ;
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0;
+}
+@keyframes lmao {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
