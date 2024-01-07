@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="Sp">
+    <div class="intro">
+      <img src="logo.png" alt="" srcset="" class="logo" />
+    </div>
+    <div class="head">
+      <img src="logo.png" alt="" srcset="" class="lg" />
+    </div>
+    <div class="image">PHOTO OR TEXT</div>
+    <div class="scroll"><h1>SCROLL DOWN</h1></div>
+    <div class="container">
+      <fieldset class="slide">
+        <legend>Hajji Adem</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Alibi Amine</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Ayeb Amine</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Shokry Abdelbery</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Othman Anis</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Makhelbi Ayoub</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Lakhrach Azer</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Hleli Mouhamed Aziz</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Yahyaoui Ali</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Dhahbi Fadi</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Ghoul Fatma</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Kraiem Ghofrane</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Zorgui Hichem</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Houssem Rabhi</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Mayssa Said</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Chaibi Malek</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Benhmida Mouhamed Amine</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Kchoum Nawres</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Ghourabi Rihem</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Alomar Rudy</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Atoui Saif</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Wnissi Sarra</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Belhadj Yassine</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Thameur Bilel</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+      <fieldset class="slide">
+        <legend>Tiss Yosra</legend>
+        <p class="msg">Message</p>
+      </fieldset>
+    </div>
+    <script>
+      document.addEventListener("scroll", function () {
+        const slides = document.querySelectorAll(".slide");
+
+        slides.forEach((slide, index) => {
+          const slideTop = slide.getBoundingClientRect().top;
+
+          const isVisible = slideTop < window.innerHeight * 0.75;
+
+          const direction = index % 2 === 0 ? 1 : -1;
+
+          if (isVisible) {
+            slide.style.opacity = 1;
+            slide.style.transform = "translateX(0)";
+          } else {
+            slide.style.opacity = 0;
+            slide.style.transform = `translateX(${direction * 100}%)`;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
