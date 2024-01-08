@@ -3,17 +3,10 @@
     margin: 0;
 }
 .Sp {
-    background: linear-gradient(
-        90deg,
-        black,
-        rgb(29, 28, 28),
-        rgb(29, 28, 28),
-        black
-      )
-      fixed;   
+
       height: 200vh;
       overflow-x: hidden;
-      animation: hidden 12s ease-in-out 1;
+      animation: hidden 5s ease-in-out 1;
 }
 .Fp{
     display: flex;
@@ -191,7 +184,7 @@
 }
 .intro {
     position: absolute;
-    animation: 4s lmao ease-in-out 1 1s ;
+    animation: 2s lmao ease-in-out 1 1s ;
     opacity: 0;
     width: 100%;
     display: flex;
@@ -221,13 +214,13 @@
     height: 75px;
     box-shadow: 0 5px 25px 0 black;
     z-index: 1000;
-    animation: head 6s ease-in-out;
+    animation: head 4s ease-in-out;
 }
 @keyframes head {
     0% {
         opacity: 0;
     }
-    95% {
+    60% {
         opacity: 0;
     }
     100%{
@@ -257,11 +250,44 @@
     align-items: center;
     width: 100%;
     height: 450px;
-    animation: head 7s ease-in-out;
+    animation: head 4s ease-in-out;
     overflow: hidden;
     margin-top: 75px;
     overflow: hidden;
     background-color: grey;
+}
+.slider-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    animation: head 4s ease-in-out;
+    overflow: hidden;
+    margin-top: 75px;
+    background-color: rgba(45, 45, 45, 0.253);
+    backdrop-filter:blur(5px);
+    box-shadow: 0 0 15px 5px black;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    .slider img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 .container {
     width: 100%;
@@ -279,18 +305,18 @@ fieldset {
     align-items: center;
     width: 55%;
     border-radius: 30px 15px;
+    backdrop-filter:blur(5px);
+    box-shadow: 0px 0 14px 2px black;
 }
 legend {
     font-style: oblique;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 700;
     color: white;
     font-size: large;
     text-align: center;
-}
-.msg {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 19px;
 }
 .slide {
     width: 60%;
@@ -304,7 +330,7 @@ legend {
     font-size: 24px;
     opacity: 0;
     transform: translateX(-100%);
-    animation: head 11s ease-in-out;
+    animation: head 3s ease-in-out;
     transition: opacity 0.5s, transform 0.5s;
   }
   @media (max-width: 600px) {
@@ -319,7 +345,7 @@ legend {
     font-style: italic;
     text-align: center;
     margin: 10px;
-    animation: scrolldown 10s ease-in-out 1;
+    animation: scrolldown 4.5s ease-in-out 1;
 }
 @keyframes hidden {
     0% {
@@ -347,4 +373,19 @@ legend {
     100% {
         text-shadow: 0 0 14px transparent;
     }
+}
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
