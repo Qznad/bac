@@ -347,7 +347,8 @@ legend {
     font-style: italic;
     text-align: center;
     margin: 10px;
-    animation: scrolldown 4.5s ease-in-out 1;
+    animation: scrolldown 4.5s ease-in-out infinite;
+    opacity: 1;
 }
 @keyframes hidden {
     0% {
@@ -364,8 +365,10 @@ legend {
     0% {
         opacity: 0;
     }
-    80%{
+    50%{
         opacity: 0;
+    }
+    80% {
         text-shadow: 0 0 14px transparent;
     }
     95%{
@@ -374,6 +377,7 @@ legend {
     }
     100% {
         text-shadow: 0 0 14px transparent;
+        opacity: 0;
     }
 }
 .background-container {
@@ -384,4 +388,5 @@ legend {
     height: 100%;
     overflow: hidden;
     background: url('photos/bg.gif') 50% 20%/cover no-repeat fixed;
+    filter: brightness(0.2);
 }
